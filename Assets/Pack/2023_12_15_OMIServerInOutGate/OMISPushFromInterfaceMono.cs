@@ -45,6 +45,23 @@ public class OMISPushFromInterfaceMono : MonoBehaviour
         m_onStartPush.Invoke();
     }
 
+    [ContextMenu("Push names")]
+    public void PushNames()
+    {
+        if (m_source == null)
+            return;
+        I_GetPrimitiveArrayToPush i = m_source.GetComponent<I_GetPrimitiveArrayToPush>();
+        PushNames(i);
+    }
+    [ContextMenu("Push Values")]
+    public void PushValues()
+    {
+        if (m_source == null)
+            return;
+        I_GetPrimitiveArrayToPush i = m_source.GetComponent<I_GetPrimitiveArrayToPush>();
+        PushValues(i);
+    }
+
     void Update()
     {
         if (!m_useUpdateToPush)
@@ -64,6 +81,8 @@ public class OMISPushFromInterfaceMono : MonoBehaviour
     private byte[] m_fnb;
     private byte[] m_vnb;
     private byte[] m_qnb;
+
+
 
     private  void PushNames(I_GetPrimitiveArrayToPush i)
     {
@@ -109,7 +128,7 @@ public class OMISPushFromInterfaceMono : MonoBehaviour
     {
         if (i != null)
         {
-            string c= i.GetUniqueCharId();
+            char c= i.GetUniqueCharId()[0];
             i.GetArray(out bool[] b, out string[] bn);
             i.GetArray(out float[] f, out string[] fn);
             i.GetArray(out Vector3[] v, out string[] vn);
@@ -153,9 +172,9 @@ public class OMISPushFromInterfaceMono : MonoBehaviour
     }
 
 
-    public static byte[] Append(byte idOfBytes, string givenCharId, byte[] bytes) {
+    public static byte[] Append(byte idOfBytes, char givenCharId, byte[] bytes) {
 
-        byte[] byteArray = OMISBytesUtility.ConvertCharToByteArray(givenCharId[0]);
+        byte[] byteArray = OMISBytesUtility.ConvertCharToByteArray(givenCharId);
         byte[] result = new byte[bytes.Length + 5];
         result[0] = idOfBytes;
         for (int i = 0; i < byteArray.Length; i++)

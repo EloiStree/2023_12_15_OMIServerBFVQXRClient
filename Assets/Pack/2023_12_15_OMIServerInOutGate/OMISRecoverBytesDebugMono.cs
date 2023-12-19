@@ -7,11 +7,13 @@ using UnityEngine;
 public class OMISRecoverBytesDebugMono : MonoBehaviour
 {
 
+    public OMIServerObjectEvent m_onConvertedBytesObject;
     public ReceivedByte m_received;
     public ReceivedByteBoolean m_bBytes;
     public ReceivedByteFloat m_fBytes;
     public ReceivedByteVector3 m_vBytes;
     public ReceivedByteQuaternion m_qBytes;
+
 
     [System.Serializable]
     public class ReceivedByteBoolean : ReceivedByteGeneric<bool> { }
@@ -29,7 +31,7 @@ public class OMISRecoverBytesDebugMono : MonoBehaviour
         public byte m_b2;
         public byte m_b3;
         public byte m_b4;
-        public string m_charAsString;
+        public char m_charAsString;
         public int m_countBytes;
         public float [] m_allFloat;
     }
@@ -41,6 +43,8 @@ public class OMISRecoverBytesDebugMono : MonoBehaviour
 
 
     public void PushIn(byte[] bytes) {
+        if (bytes == null)
+            return;
 
         if (bytes.Length <= 5)
             return;
@@ -59,6 +63,8 @@ public class OMISRecoverBytesDebugMono : MonoBehaviour
         Set(ref bytes, (ReceivedByte)received);
         received.m_valueArray = received.m_allFloat;
 
+        m_onConvertedBytesObject.Invoke(new CharUTFToFloatArray(received.m_charAsString, received.m_valueArray));
+
     }
 
     private void Set(ref byte[] bytes, ReceivedByteVector3 received)
@@ -67,6 +73,7 @@ public class OMISRecoverBytesDebugMono : MonoBehaviour
         received.m_valueArray = OMISBytesUtility.
             ConvertToVector3(
             received.m_allFloat);
+        m_onConvertedBytesObject.Invoke(new CharUTFToVector3Array(received.m_charAsString, received.m_valueArray));
 
     }
 
@@ -76,6 +83,7 @@ public class OMISRecoverBytesDebugMono : MonoBehaviour
         received.m_valueArray = OMISBytesUtility.
             ConvertToQuaternion(
             received.m_allFloat);
+        m_onConvertedBytesObject.Invoke(new CharUTFToQuaternionArray(received.m_charAsString, received.m_valueArray));
 
     }
     private void Set(ref byte[] bytes, ReceivedByteBoolean received)
@@ -84,6 +92,7 @@ public class OMISRecoverBytesDebugMono : MonoBehaviour
         received.m_valueArray = OMISBytesUtility.
             ConvertToBoolArray(
             ref bytes,5);
+        m_onConvertedBytesObject.Invoke(new CharUTFToBoolArray(received.m_charAsString, received.m_valueArray));
 
     }
 
@@ -101,11 +110,22 @@ public class OMISRecoverBytesDebugMono : MonoBehaviour
 
     }
 
-    public string ConvertBytesToStringChar(byte b0, byte b1, byte b2, byte b3)
+    public char ConvertBytesToStringChar(byte b0, byte b1, byte b2, byte b3)
     {
-        byte[] utf8Bytes = { b0,  b1,  b2,  b3 };
-        return Encoding.UTF8.GetString(utf8Bytes);
+        byte[] utf8Bytes = { b0, b1, b2, b3 };
+        return ConvertToChar(utf8Bytes);
+
+
+    }
+    static char ConvertToChar(byte[] byteArray)
+    {
+      
+
+        int intValue = BitConverter.ToInt32(byteArray, 0);
+        char resultChar = (char)intValue;
+
+        return resultChar;
     }
 
-   
+
 }
