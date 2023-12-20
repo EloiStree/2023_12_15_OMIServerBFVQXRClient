@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenXRAsBytesArraysMono : MonoBehaviour, I_GetPrimitiveArrayToPush
 {
-    public string m_uniqueIdToPush="£";
+    public char m_uniqueIdToPush ='£';
     public string[] m_namedFloat = new string[] { "XRJLH", "XRJLV", "XRJRH", "XRJRV", "XRTL", "XRTR", "XRGL", "XRGR", };
     [Range(-1, 1)]
     public float m_joystickLeftHorizontal;
@@ -146,7 +146,7 @@ public class OpenXRAsBytesArraysMono : MonoBehaviour, I_GetPrimitiveArrayToPush
         }
     }
 
-    public string GetUniqueCharId()
+    public char GetUniqueCharId()
     {
         return m_uniqueIdToPush;
     }
