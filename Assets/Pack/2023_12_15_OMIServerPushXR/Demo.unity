@@ -1091,7 +1091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &562081168
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,6 +1175,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 0
   m_useStartToPush: 1
   m_useUpdateToPush: 1
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!114 &562081170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,7 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07fca8c93de6ec4c89e33eb61adadd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_charUniqueid: 36
+  m_charUniqueid: 43
   m_source: {fileID: 562081171}
   m_pushPositions: 1
   m_pushRotations: 1
@@ -1557,6 +1559,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 85
   m_useStartToPush: 1
   m_useUpdateToPush: 1
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!114 &737252314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,204 +1859,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -6874584590210671055, guid: e99084c4500fac04f9e5d8e8e5163c14, type: 3}
   m_PrefabInstance: {fileID: 1203299399}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &937340594
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937340596}
-  - component: {fileID: 937340595}
-  m_Layer: 0
-  m_Name: player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &937340595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937340594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b36eba97-83cf-4cfc-b0cf-d768d7b59458
-    m_ActionName: LeftXR/IsTracked
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 33cb742d-44e1-472c-831c-344cdfce0a6d
-    m_ActionName: LeftXR/PrimaryButton
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f2763c4e-dd2f-4106-bf2e-40618deaaa60
-    m_ActionName: LeftXR/PrimaryTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 89feada1-1f54-4e02-b43c-e30a59a9b86f
-    m_ActionName: LeftXR/SecondaryTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9e9d562c-8942-403b-8d50-402c02f48b59
-    m_ActionName: LeftXR/SecondaryButton
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 946cce3b-a30e-429a-85f7-84fc4b1a2f3f
-    m_ActionName: LeftXR/GripPercent
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 58680d5d-6f83-4697-a261-c238c32833bb
-    m_ActionName: LeftXR/TriggerPercent
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7f38bfca-6a0c-4a85-b165-60e613771cae
-    m_ActionName: LeftXR/MainJoystick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 25e92615-a47e-4de9-a228-707bb2711888
-    m_ActionName: LeftXR/SecondaryJoystick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 70e97457-7ccf-47ca-a1aa-9014c764bee3
-    m_ActionName: LeftXR/WorldPosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 05c425c1-10d9-4362-91b7-aa695f8ffc3e
-    m_ActionName: LeftXR/WorldRotation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ca231117-5bf2-4da7-8a6e-6fe925018588
-    m_ActionName: LeftXR/TiggerTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: abf79c80-a91b-4299-94b5-3ddc4ae81e7d
-    m_ActionName: LeftXR/TriggerProximity
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a629c72e-11ef-487e-82ab-a149f8eeb085
-    m_ActionName: LeftXR/JoystickProximity
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cdbcd05f-5ecb-4c3e-a589-37945a07ee55
-    m_ActionName: LeftXR/SideThumbTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: abf9228d-1357-4741-aa20-50a14b960fa3
-    m_ActionName: LeftXR/SideThumbButton
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e4057ad6-200c-4c73-86c9-9a44f9b1b432
-    m_ActionName: LeftXR/Menu
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: efd90ba3-8bde-49cf-a0fd-5dce6a734944
-    m_ActionName: RightXR/IsTracked
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 838cfce1-5748-4480-b346-23cd6893a0c9
-    m_ActionName: RightXR/PrimaryButton
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 087b742c-75d2-4bde-92c2-5aec1252991e
-    m_ActionName: RightXR/PrimaryTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f23d26b7-5b17-4cd5-85fd-31a00b1e76ab
-    m_ActionName: RightXR/SecondaryTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2da907d1-9e6d-487f-a0b4-59863e9187d0
-    m_ActionName: RightXR/SecondaryButton
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3cf3515c-5779-4821-9acd-810431993856
-    m_ActionName: RightXR/GripPercent
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7a6d1dc0-c178-41e7-9897-06a572d603b6
-    m_ActionName: RightXR/TriggerPercent
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 74d817c2-9f00-4d05-9889-cb18aacf113e
-    m_ActionName: RightXR/MainJoystick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 21e04af2-fca5-4245-b4cf-06555c796b49
-    m_ActionName: RightXR/SecondaryJoystick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6f36ef6b-0433-49da-9b9e-66f774fc4cd9
-    m_ActionName: RightXR/WorldPosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1de8a7aa-7678-477d-b345-92ab3aa6bba0
-    m_ActionName: RightXR/WorldRotation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cae97609-498d-445b-ae92-919c214ceba7
-    m_ActionName: RightXR/TiggerTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5e2100fd-10ae-45c4-9d3c-497aff206061
-    m_ActionName: RightXR/TriggerProximity
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9cef655e-1527-447b-a201-079d707eea41
-    m_ActionName: RightXR/JoystickProximity
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 82064bc7-5713-440d-a406-83269df008ad
-    m_ActionName: RightXR/SideThumbTouch
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 57359d55-8006-4283-a57f-03926e8cd341
-    m_ActionName: RightXR/SideThumbButton
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1b33bb41-d56b-4a49-b542-43b37830b3ad
-    m_ActionName: RightXR/Menu
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: RightXR
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!4 &937340596
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937340594}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0092532635, y: 0.64509237, z: 0.17531538}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &985866601 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4968769839778511794, guid: 8b4d02b4e05af714dab2a12548a310f8, type: 3}
@@ -2879,6 +2685,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_useMapNameInName: 1
+  m_charToSplitMapAndName: _
 --- !u!4 &1323931722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6000407479487422213, guid: e99084c4500fac04f9e5d8e8e5163c14, type: 3}
@@ -2986,6 +2794,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 0
   m_useStartToPush: 1
   m_useUpdateToPush: 1
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!114 &1339858036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2998,7 +2808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07fca8c93de6ec4c89e33eb61adadd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_charUniqueid: 36
+  m_charUniqueid: 94
   m_source: {fileID: 1339858037}
   m_pushPositions: 1
   m_pushRotations: 1
@@ -3269,6 +3079,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 0
   m_useStartToPush: 1
   m_useUpdateToPush: 1
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!4 &1342597229
 Transform:
   m_ObjectHideFlags: 0
@@ -3771,7 +3583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1511130885
 Transform:
   m_ObjectHideFlags: 0
@@ -3855,6 +3667,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 0
   m_useStartToPush: 1
   m_useUpdateToPush: 1
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!114 &1511130887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3867,7 +3681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07fca8c93de6ec4c89e33eb61adadd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_charUniqueid: 36
+  m_charUniqueid: 59
   m_source: {fileID: 1511130888}
   m_pushPositions: 1
   m_pushRotations: 1
@@ -4077,7 +3891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1568225768
 Transform:
   m_ObjectHideFlags: 0
@@ -4379,6 +4193,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 0
   m_useStartToPush: 1
   m_useUpdateToPush: 1
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!114 &1568225772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4471,10 +4287,34 @@ MonoBehaviour:
   m_source: {fileID: 1790943380}
   m_pushLabel:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702895680}
+        m_TargetAssemblyTypeName: OMISPushToUDPMono, Assembly-CSharp
+        m_MethodName: PushTextUTF8
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_pushBytes:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 353071276}
+        m_TargetAssemblyTypeName: OMISPushToUDPMono, Assembly-CSharp
+        m_MethodName: PushBytesAsRaw
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onStartPush:
     m_PersistentCalls:
       m_Calls: []
@@ -4488,6 +4328,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 0
   m_useStartToPush: 1
   m_useUpdateToPush: 1
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!114 &1790943382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4545,6 +4387,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1301507931}
+  - {fileID: 1957812696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1800359842
@@ -5017,6 +4860,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: e99084c4500fac04f9e5d8e8e5163c14, type: 3}
   m_PrefabInstance: {fileID: 1203299399}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1957812695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957812696}
+  - component: {fileID: 1957812697}
+  m_Layer: 0
+  m_Name: PlayerToEvent XR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1957812696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957812695}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1790943383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1957812697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957812695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b3db9d54ab5984ba739ad6704e6bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_currentActionMap:
+    m_Name: Current
+    m_Id: 86370448-92db-45e8-94c5-80b070e883b2
+    m_Asset: {fileID: 0}
+    m_Actions: []
+    m_Bindings: []
+  m_actions: {fileID: -944628639613478452, guid: ecdb5093903f42c43b993f783d0f6dda, type: 3}
+  m_onBoolEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1790943382}
+        m_TargetAssemblyTypeName: OMISPrimitiveCollectorMono, Assembly-CSharp
+        m_MethodName: Push
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onFloatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1790943382}
+        m_TargetAssemblyTypeName: OMISPrimitiveCollectorMono, Assembly-CSharp
+        m_MethodName: Push
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onVector3Event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1790943382}
+        m_TargetAssemblyTypeName: OMISPrimitiveCollectorMono, Assembly-CSharp
+        m_MethodName: Push
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onQuaternionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1790943382}
+        m_TargetAssemblyTypeName: OMISPrimitiveCollectorMono, Assembly-CSharp
+        m_MethodName: Push
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_useMapNameInName: 1
+  m_charToSplitMapAndName: _
 --- !u!224 &2001866392 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4941219564456579801, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
@@ -5111,6 +5067,8 @@ MonoBehaviour:
   m_quaternoinByteCount: 0
   m_useStartToPush: 1
   m_useUpdateToPush: 0
+  m_usePushNameSometime: 1
+  m_pushNameEverySeconds: 5
 --- !u!114 &2030762585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6988,5 +6946,4 @@ SceneRoots:
   - {fileID: 1251731209}
   - {fileID: 1806056952}
   - {fileID: 1203299399}
-  - {fileID: 937340596}
   - {fileID: 1790943383}

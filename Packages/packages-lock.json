@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "be.eloistree.gittogiti": {
+      "version": "https://github.com/EloiStree/2023_11_24_GitToGiti.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e7bcfe6328848b8510e9f0358d4cbde087a4c571"
+    },
     "be.eloistree.license": {
       "version": "https://github.com/EloiStree/GeneralLicense.git",
       "depth": 0,

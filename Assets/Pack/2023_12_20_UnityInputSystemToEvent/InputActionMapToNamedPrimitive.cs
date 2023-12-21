@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using static UnityEngine.InputSystem.PlayerInput;
 
-public class InputActionMapToNamedPrimitiveOMIS : MonoBehaviour
+public class InputActionMapToNamedPrimitive : MonoBehaviour
 {
 
     public InputActionMap m_currentActionMap;
@@ -20,7 +19,18 @@ public class InputActionMapToNamedPrimitiveOMIS : MonoBehaviour
     public NamedQuaternionEvent     m_onQuaternionEvent;
 
 
-    
+    [System.Serializable]
+    public class NamedBoolEvent : UnityEvent<string, bool> { }
+
+    [System.Serializable]
+    public class NamedFloatEvent : UnityEvent<string, float> { }
+
+    [System.Serializable]
+    public class NamedVector3Event : UnityEvent<string, Vector3> { }
+
+    [System.Serializable]
+    public class NamedQuaternionEvent : UnityEvent<string, Quaternion> { }
+
 
     private void OnEnable()
     {
